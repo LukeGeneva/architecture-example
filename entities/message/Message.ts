@@ -34,7 +34,7 @@ export class Message extends Entity {
   };
 
   unlike = () => {
-    this._likes -= 1;
+    if (this._likes > 0) this._likes -= 1;
   };
 
   static __hydrate = (data: MessageHydrationData) => {

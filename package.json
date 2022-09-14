@@ -10,6 +10,7 @@
     "test:watch": "jest --watch --runInBand --no-cache"
   },
   "dependencies": {
+    "@prisma/client": "^4.3.1",
     "@remix-run/node": "^1.7.0",
     "@remix-run/react": "^1.7.0",
     "@remix-run/serve": "^1.7.0",

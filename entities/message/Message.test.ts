@@ -28,3 +28,9 @@ test('that message can be hydrated', () => {
   expect(message.text).toEqual('Test');
   expect(message.likes).toEqual(5);
 });
+
+test('that unliking a message with 0 likes does not result in negative likes', () => {
+  const message = new Message('Test');
+  message.unlike();
+  expect(message.likes).toBe(0);
+});
