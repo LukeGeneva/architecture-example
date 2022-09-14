@@ -16,11 +16,18 @@ export default function MessageBoardsIndex() {
       <h1>Message Boards</h1>
       <hr />
       {messageBoardOutput.messageBoards.map((messageBoard) => (
-        <li key={messageBoard.id}>
-          <a href={`/message-boards/${messageBoard.id}`}>{messageBoard.name}</a>
+        <li className="list-none py-2" key={messageBoard.id}>
+          <a
+            className="hover:text-blue-500"
+            href={`/message-boards/${messageBoard.id}`}
+          >
+            {messageBoard.name}
+          </a>
         </li>
       ))}
-      <a href="/message-boards/new">New Message Board</a>
+      <a className="btn" href="/message-boards/new">
+        New Message Board
+      </a>
     </div>
   );
 }

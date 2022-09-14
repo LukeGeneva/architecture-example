@@ -7,12 +7,17 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <header>
+      <header className="bg-primary text-white">
         <nav>
-          <a href="/message-boards">Boards</a>
+          <a
+            className="px-4 py-2 inline-block hover:bg-primary-dark"
+            href="/message-boards"
+          >
+            Boards
+          </a>
         </nav>
       </header>
-      <main>{children}</main>
+      <main className="p-4">{children}</main>
     </>
   );
 }

@@ -20,32 +20,41 @@ export default function MessageBoardPage() {
     <div>
       <h1>{messageBoardOutput.boardName}</h1>
       <hr />
-      {messageBoardOutput.messages.map((message) => (
-        <div key={message.id}>
-          <p>{message.text}</p>
-          <div>
-            Likes: {message.likes}
-            <form
-              action={`/message-boards/${messageBoardOutput.boardId}/messages/${message.id}/like`}
-              method="post"
-            >
-              <button type="submit">+1</button>
-            </form>
-            <form
-              action={`/message-boards/${messageBoardOutput.boardId}/messages/${message.id}/unlike`}
-              method="post"
-            >
-              <button type="submit">-1</button>
-            </form>
+      <div className="flex flex-col gap-2">
+        {messageBoardOutput.messages.map((message) => (
+          <div key={message.id} className="card">
+            <p className="mb-8">{message.text}</p>
+            <div className="flex gap-2 items-center">
+              <div>Likes: {message.likes}</div>
+              <form
+                action={`/message-boards/${messageBoardOutput.boardId}/messages/${message.id}/like`}
+                method="post"
+              >
+                <button className="btn" type="submit">
+                  +1
+                </button>
+              </form>
+              <form
+                action={`/message-boards/${messageBoardOutput.boardId}/messages/${message.id}/unlike`}
+                method="post"
+              >
+                <button className="btn" type="submit">
+                  -1
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <form
+        className="mt-4"
         action={`/message-boards/${messageBoardOutput.boardId}/post`}
         method="post"
       >
         <input placeholder="Message" name="text" type="text" />
-        <button type="submit">Send</button>
+        <button className="btn" type="submit">
+          Send
+        </button>
       </form>
     </div>
   );

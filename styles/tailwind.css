@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply bg-gray-50;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  input[type='text'],
+  input[type='datetime-local'],
+  input[type='date'],
+  input[type='password'] {
+    @apply p-2 rounded-md text-input border-2;
+  }
+
+  .bg-primary {
+    @apply bg-blue-600;
+  }
+
+  .bg-primary-dark {
+    @apply bg-blue-700;
+  }
+
+  .btn {
+    @apply rounded bg-primary text-white px-2 py-1 cursor-pointer;
+  }
+
+  .btn:hover {
+    @apply bg-primary-dark;
+  }
+
+  .btn-gray {
+    @apply bg-gray-500;
+  }
+
+  .btn-gray:hover {
+    @apply bg-gray-600;
+  }
+
+  .btn-success {
+    @apply bg-green-600;
+  }
+
+  .btn-success:hover {
+    @apply bg-green-700;
+  }
+
+  .card {
+    @apply rounded shadow-lg p-2 bg-white;
+  }
+
+  .form-control {
+    @apply py-2;
+  }
+
+  .form-control > label {
+    @apply flex flex-col font-semibold;
+  }
+
+  .form-control > label > input {
+    @apply font-normal;
+  }
+
+  .text-input {
+    @apply text-black;
+  }
+
+  .text-primary {
+    @apply text-blue-600;
+  }
+
+  .textbox {
+    @apply rounded p-2 border-2 border-blue-500 w-full;
+  }
+
+  .vimium-button {
+    /* Empty class that triggers Vimium quick-nav links */
+  }
+}
