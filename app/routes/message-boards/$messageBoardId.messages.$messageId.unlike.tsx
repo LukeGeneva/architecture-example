@@ -1,6 +1,6 @@
 import type { ActionFunction } from '@remix-run/node';
 import { redirect } from '@remix-run/node';
-import { unlikeMessage } from '../../compositiionRoot.server';
+import { unlikeMessage } from '../../composition-root';
 
 export const action: ActionFunction = async ({ params }) => {
   const messageBoardId = params.messageBoardId;

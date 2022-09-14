@@ -1,6 +1,6 @@
 import type { ActionFunction } from '@remix-run/node';
 import { redirect } from '@remix-run/node';
-import { createMessageBoard } from '../../compositiionRoot.server';
+import { createMessageBoard } from '../../composition-root';
 
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();

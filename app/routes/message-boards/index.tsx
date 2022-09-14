@@ -1,7 +1,7 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import type { ListMessageBoardsOutput } from '../../../use-cases/ListMessageBoardsUseCase';
-import { listMessageBoards } from '../../compositiionRoot.server';
+import { listMessageBoards } from '../../composition-root';
 
 export const loader: LoaderFunction = async () => {
   const listMessageBoardsOutput = await listMessageBoards.execute();
