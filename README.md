@@ -62,7 +62,7 @@ These are both easy, but I would argue the second snippet does a better job of g
 Encapsulation goes hand-in-hand with readability. The previous examples are trivial, but what about when a bit more logic is involved? Say we want make sure that likes don't become negative if the message is "unliked" while the likes are at `0`. That may look something like this:
 
 ```typescript
-message.likes = message.likes > 0 ? (message.likes -= 1) : 0;
+message.likes = message.likes > 0 ? message.likes - 1 : 0;
 ```
 
 ```typescript
